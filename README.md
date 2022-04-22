@@ -1,1 +1,1 @@
-# Assign-03-HTML-CommuteCostCalculator
+[![GitHub's Super Linter](https://github.com/ICS20-Programming-Grace-S/Assign-03-HTML-CommuteCostCalculator/workflows/GitHub's%20Super%20Linter/badge.svg)](https://github.com/ICS20-Programming-Grace-S/Assign-03-HTML-CommuteCostCalculator/actions)
