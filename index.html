@@ -1,1 +1,94 @@
-eefrr
+<!DOCTYPE html>
+</html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Commute Cost Calculator, with JavaScript">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="Grace S">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png">
+    <link rel="manifest" href="./fav_index/site.webmanifest">
+
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Title -->
+    <title>Commute Cost Calculator, with JavaScript</title>
+  </head>
+<body>
+  
+  <!-- Call to java script file -->
+  <script src="./js/script.js"></script>
+  <h1>Commute Cost Calculator, with Javascript</h1>      
+  
+  <!-- User Input for Daily Round Trip Commute-->  
+  <table>
+    <tr>
+      <td>
+        <h3>Daily Roundtrip Commute</h3>
+        <form action="javascript:calcTime()">
+          <label for="speed">Distance in Km:</label>
+          <input type="number" step="any" min="0" id="speed" placeholder="Enter speed (km/h)">
+          <br>
+          <br>
+          
+          <!-- User Input for Kilometres per Gallon -->
+          <h3>Kilometres per Gallon</h3>
+          <label for="distance">Distance:</label>
+          <input type="number" step="any" min="0" id="distance" placeholder="Enter distance (km)">
+        </form>
+        <br>
+        <br>
+      </td>
+
+      <!-- User INput for Working Days -->
+      <td>
+        <h3>Working Days (per Month) </h3>
+        <form action="javascript:calcSpeed()">
+          <label for="time">Days:</label>
+          <input type="number" step="any" min="0" id="time" placeholder="Enter time (hours)">
+          <br>
+          <br>
+          
+          <!-- User Input for Price per Gallon -->
+          <h3>Fuel Price per Gallon</h3>
+          <label for="distance2">Distance:</label>
+          <input type="number" step="any" min="0" id="distance2" placeholder="Enter distance (km)">
+          <br>
+          <br>
+          <br>
+          
+          <!-- Calculate Button -->
+          <input type="submit" value="Calculate Speed">
+        </form>
+        <br>
+        <br>
+      </td>
+
+      <!-- User input for Car Payment -->
+      <td>
+        <h3>Car Payment (per Month)</h3>
+        <form action="javascript:calcDistance()">
+          <label for="time2">Time:</label>
+          <input type="number" step="any" min="0" id="time2" placeholder="Enter time (hours)">
+          <br>
+          <br>
+
+          <!-- User Input for Parking Cost -->
+          <h3>Parking Cost (per Month)</h3>
+          <label for="speed2">Speed:</label>
+          <input type="number" step="any" min="0" id="speed2" placeholder="Enter distance (km/h)">
+        </form>
+      </td>
+
+      <!-- Div id for Calculations -->
+    <tr>
+      <td>
+        <div id="totalSpeed"></div>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
