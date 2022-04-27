@@ -1,3 +1,16 @@
+/* Created by: Grace S
+* Created on: Apr 2022
+* This CSS file defines the style for index.html
+* Assign-03-HTML-NameOfProgram
+*/
+
+div {
+	
+  font-weight: bold;
+  color: #050505;
+  margin: 5px;
+}
+
 table td {
  height: 475px;
  width: 475px;
@@ -19,16 +32,17 @@ table td {
 }
 
 #display-results{
-  background-color: #c9f3eb;
+  background-color: #d8d7f4;
 }
 
+
 body {
-  background-color: rgb(223, 248, 243);
+  background-color: rgb(195, 195, 229);
 }
 
 h1 {
-  background-color: #a9ecdf;
-  color: #050505;
+  background-color: #443266;
+  color: #f1f0ff;
   padding: 40px;
   text-align: center;
 }
@@ -38,17 +52,10 @@ h1 {
   font-size: 30px;
 }
 
-div {
-	
-  font-weight: bold;
-  color: #050505;
-  margin: 8px;
-}
-
-h2 {
+h3 {
   border-style: solid;
-  background-color: #c9f3eb;
-  color: hsl(169, 63%, 49%);
-  border-color: #b4eee3;
+  background-color: #f1f0ff;
+  color: #1961a3;
+  border-color: #443266;
   text-align: center;
 }

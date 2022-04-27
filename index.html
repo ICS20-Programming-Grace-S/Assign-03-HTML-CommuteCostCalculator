@@ -1,94 +1,112 @@
 <!DOCTYPE html>
 </html>
   <head>
+
+    <!-- Metadata -->
     <meta charset="utf-8">
     <meta name="description" content="Commute Cost Calculator, with JavaScript">
     <meta name="keywords" content="immaculata, ics2o">
     <meta name="author" content="Grace S">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png">
     <link rel="manifest" href="./fav_index/site.webmanifest">
 
-    <!-- Link to CSS file -->
+    <!-- CSS File -->
     <link rel="stylesheet" href="./css/style.css">
 
     <!-- Title -->
-    <title>Commute Cost Calculator, with JavaScript</title>
+    <title>Calculator for Time, Speed and Distance</title>
   </head>
-<body>
-  
-  <!-- Call to java script file -->
-  <script src="./js/script.js"></script>
-  <h1>Commute Cost Calculator, with Javascript</h1>      
-  
-  <!-- User Input for Daily Round Trip Commute-->  
-  <table>
-    <tr>
-      <td>
-        <h3>Daily Roundtrip Commute</h3>
-        <form action="javascript:calcTime()">
-          <label for="speed">Distance in Km:</label>
-          <input type="number" step="any" min="0" id="speed" placeholder="Enter Distance (km)">
+  <body>
+    
+    <!-- URl for JS File -->
+    <script src="./js/script.js"></script>
+
+    <!-- Header for Webpage -->
+    <h1>Commute Cost Calculator</h1>  
+
+    <!-- Image -->
+    <center>
+      <img src="./images/Commute.jpg" alt="commute" width="50%" height="auto"/>
+    </center>
+    
+    <!-- Numeric Textfield For Daily Roundtrip Commute -->
+    <table>
+      <tr>
+        <td>
+          <h3>Daily Roundtrip Commute (in kilometres)</h3>
+          <label for="distance">Distance:</label>
+          <input type="number" step="0.001" min="0" id="dailyCommute" placeholder="Enter Commute (km)...">
+          <br>
+          <br>
+            
+          <!-- Numeric Textfield for Working Days (per month) -->
+          <h3>Working Days (per month)</h3>
+          <label for="days">Days:</label>
+          <input type="number" step="any" min="0" id="workingDays" placeholder="Enter Working Days...">
+          <br>
+          <br>
+        </td>
+        
+        <!-- Numeric Textfield for Kilometres per Gallon (in kilometres) -->
+        <td>
+          <h3>Kilometres per Gallon (in kilometres)</h3>
+          <label for="gallon">Kilometres per Gallon:</label>
+  				<input type="number" step="any" min="0" id="kilometresGallon" placeholder="Enter km per Gallon (km)...">
+          <br>
+          <br>
+            
+          <!-- Numeric Textfield for Fuel Price per Gallon ($) -->
+          <h3>Fuel Price per gallon ($)</h3>
+          <label for="FuelPrice">Fuel Price:</label>
+          <input type="number" step="any" min="0" id="fuel" placeholder="Enter Fuel Price ($)...">
           <br>
           <br>
           
-          <!-- User Input for Kilometres per Gallon -->
-          <h3>Kilometres per Gallon</h3>
-          <label for="distance">Kilometres per Gallon:</label>
-          <input type="number" step="any" min="0" id="distance" placeholder="Enter kilometres (km)">
-        </form>
-        <br>
-        <br>
-      </td>
-
-      <!-- User INput for Working Days -->
-      <td>
-        <h3>Working Days (per Month) </h3>
-        <form action="javascript:calcSpeed()">
-          <label for="time">Working Days:</label>
-          <input type="number" step="any" min="0" id="time" placeholder="Enter Working Days">
+          <!-- Button to Calculate -->
+          <br>
+          <center>
+            <button
+              class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculate()"
+            >
+              
+          Calculate
+            </button>
+            
+            <!-- Create a space where the user information will be displayed -->
+            <br>
+            <br>
+            <h3><div id="kilometreDistance"></div>
+            <div id="gallonsOfFuel"></div>
+            <div id="priceFuel"></div>
+            <div id="total"></div>
+            <div id="yearlyTotal"></div></h3>
+          </center>
           <br>
           <br>
-          
-          <!-- User Input for Price per Gallon -->
-          <h3>Fuel Price per Gallon</h3>
-          <label for="distance2">Fuel Price ($):</label>
-          <input type="number" step="any" min="0" id="distance2" placeholder="Enter Fuel Price ($)">
+        </td>
+        
+        <!-- Numeric Textfield for Car Payement per Month ($) -->
+        <td>
+          <h3>Car Payement per Month ($)</h3>
+          <label for="car">Car Payement:</label>
+          <input type="number" step="any" min="0" id="payement" placeholder="Enter Car Payment ($)...">
           <br>
           <br>
-          <br>
-          
-          <!-- Calculate Button -->
-          <input type="submit" value="Calculate Speed">
-        </form>
-        <br>
-        <br>
-      </td>
-
-      <!-- User input for Car Payment -->
-      <td>
-        <h3>Car Payment (per Month)</h3>
-        <form action="javascript:calcDistance()">
-          <label for="time2">Car Payment:</label>
-          <input type="number" step="any" min="0" id="time2" placeholder="Enter Payement ($)">
+            
+          <!-- Numeric Textfield for Parking Cost (per month) -->
+          <h3>Parking Cost (per month)</h3>
+          <label for="parking">Parking Cost ($):</label>
+  		<input type="number" step="any" min="0" id="parking" placeholder="Enter Parking Cost ($)...">
           <br>
           <br>
-
-          <!-- User Input for Parking Cost -->
-          <h3>Parking Cost (per Month)</h3>
-          <label for="speed2">Parking Cost ($):</label>
-          <input type="number" step="any" min="0" id="speed2" placeholder="Enter Parking Cost ($)">
-        </form>
-      </td>
-
-      <!-- Div id for Calculations -->
-    <tr>
-      <td>
-        <div id="totalSpeed"></div>
-      </td>
-    </tr>
-  </table>
-</body>
+        </td>
+      </tr>
+    </table>  
+  </body>
 </html>
