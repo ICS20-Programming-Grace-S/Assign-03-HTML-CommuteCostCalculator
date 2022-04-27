@@ -35,78 +35,80 @@
     </center>
     
     <!-- Numeric Textfield For Daily Roundtrip Commute -->
-    <table>
-      <tr>
-        <td>
-          <h3>Daily Roundtrip Commute (in kilometres)</h3>
-          <label for="distance">Distance:</label>
-          <input type="number" step="0.001" min="0" id="dailyCommute" placeholder="Enter Commute (km)...">
-          <br>
-          <br>
-            
-          <!-- Numeric Textfield for Working Days (per month) -->
-          <h3>Working Days (per month)</h3>
-          <label for="days">Days:</label>
-          <input type="number" step="any" min="0" id="workingDays" placeholder="Enter Working Days...">
-          <br>
-          <br>
-        </td>
-        
-        <!-- Numeric Textfield for Kilometres per Gallon (in kilometres) -->
-        <td>
-          <h3>Kilometres per Gallon (in kilometres)</h3>
-          <label for="gallon">Kilometres per Gallon:</label>
-  				<input type="number" step="any" min="0" id="kilometresGallon" placeholder="Enter km per Gallon (km)...">
-          <br>
-          <br>
-            
-          <!-- Numeric Textfield for Fuel Price per Gallon ($) -->
-          <h3>Fuel Price per gallon ($)</h3>
-          <label for="FuelPrice">Fuel Price:</label>
-          <input type="number" step="any" min="0" id="fuel" placeholder="Enter Fuel Price ($)...">
-          <br>
-          <br>
-          
-          <!-- Button to Calculate -->
-          <br>
-          <center>
-            <button
-              class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="calculate()"
-            >
+    <center>
+      <table>
+        <tr>
+          <td>
+            <h3>Daily Roundtrip Commute (in kilometres)</h3>
+            <label for="distance">Distance:</label>
+            <input type="number" step="0.001" min="0" id="dailyCommute" placeholder="Enter Commute (km)...">
+            <br>
+            <br>
               
-          Calculate
-            </button>
-            
-            <!-- Create a space where the user information will be displayed -->
+            <!-- Numeric Textfield for Working Days (per month) -->
+            <h3>Working Days (per month)</h3>
+            <label for="days">Days:</label>
+            <input type="number" step="any" min="0" id="workingDays" placeholder="Enter Working Days...">
             <br>
             <br>
-            <h3><div id="kilometreDistance"></div>
-            <div id="gallonsOfFuel"></div>
-            <div id="priceFuel"></div>
-            <div id="total"></div>
-            <div id="yearlyTotal"></div></h3>
-          </center>
-          <br>
-          <br>
-        </td>
-        
-        <!-- Numeric Textfield for Car Payement per Month ($) -->
-        <td>
-          <h3>Car Payement per Month ($)</h3>
-          <label for="car">Car Payement:</label>
-          <input type="number" step="any" min="0" id="payement" placeholder="Enter Car Payment ($)...">
-          <br>
-          <br>
+          </td>
+          
+          <!-- Numeric Textfield for Kilometres per Gallon (in kilometres) -->
+          <td>
+            <h3>Kilometres per Gallon (in kilometres)</h3>
+            <label for="gallon">Kilometres per Gallon:</label>
+    				<input type="number" step="any" min="0" id="kilometresGallon" placeholder="Enter km per Gallon (km)...">
+            <br>
+            <br>
+              
+            <!-- Numeric Textfield for Fuel Price per Gallon ($) -->
+            <h3>Fuel Price per gallon ($)</h3>
+            <label for="FuelPrice">Fuel Price:</label>
+            <input type="number" step="any" min="0" id="fuel" placeholder="Enter Fuel Price ($)...">
+            <br>
+            <br>
             
-          <!-- Numeric Textfield for Parking Cost (per month) -->
-          <h3>Parking Cost (per month)</h3>
-          <label for="parking">Parking Cost ($):</label>
-  		<input type="number" step="any" min="0" id="parking" placeholder="Enter Parking Cost ($)...">
-          <br>
-          <br>
-        </td>
-      </tr>
-    </table>  
+            <!-- Button to Calculate -->
+            <br>
+            <center>
+              <button
+                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            onclick="calculate()"
+              >
+                
+            Calculate
+              </button>
+              
+              <!-- Create a space where the user information will be displayed -->
+              <br>
+              <br>
+              <h3><div id="kilometreDistance"></div>
+              <div id="gallonsOfFuel"></div>
+              <div id="priceFuel"></div>
+              <div id="total"></div>
+              <div id="yearlyTotal"></div></h3>
+            </center>
+            <br>
+            <br>
+          </td>
+          
+          <!-- Numeric Textfield for Car Payement per Month ($) -->
+          <td>
+            <h3>Car Payement per Month ($)</h3>
+            <label for="car">Car Payement:</label>
+            <input type="number" step="any" min="0" id="payement" placeholder="Enter Car Payment ($)...">
+            <br>
+            <br>
+              
+            <!-- Numeric Textfield for Parking Cost (per month) -->
+            <h3>Parking Cost (per month)</h3>
+            <label for="parking">Parking Cost ($):</label>
+    		<input type="number" step="any" min="0" id="parking" placeholder="Enter Parking Cost ($)...">
+            <br>
+            <br>
+          </td>
+        </tr>
+      </table>
+    </center>
   </body>
 </html>

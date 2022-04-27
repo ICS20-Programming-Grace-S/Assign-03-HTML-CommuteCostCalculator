@@ -18,8 +18,8 @@ function calculate() {
   
   // calculate the user inputs into formulas
   let distanceKilometres = (workingDays * dailyCommute)
-  let gallonsFuel = (distanceKilometres/kilometresGallon)
-  let moneyFuel = ((gallonsFuel * workingDays)/fuel)
+  let gallonsFuel = (distanceKilometres / kilometresGallon)
+  let moneyFuel = ((fuel * distanceKilometres) / kilometresGallon);
   let total = (payement + moneyFuel + parking)
   let yearTotal = (total * 12)
   
@@ -27,11 +27,11 @@ function calculate() {
   // display the results
   document.getElementById('kilometreDistance').innerHTML = 'My Distance travelled per month is: ' + distanceKilometres.toFixed(2)  + ' km.'
 
-  document.getElementById('gallonsOfFuel').innerHTML = 'Gallons of Fuel: ' + distanceKilometres.toFixed(2)  + ' gallons.'
+  document.getElementById('gallonsOfFuel').innerHTML = 'Gallons of Fuel: ' + gallonsFuel.toFixed(2)  + ' gallons.'
 
   document.getElementById('priceFuel').innerHTML = 'Spent on Fuel: $ ' + moneyFuel.toFixed(2)
 
-    document.getElementById('total').innerHTML = 'My Cost of Commuting: $ ' + total.toFixed(2) + '/month'
+  document.getElementById('total').innerHTML = 'My Cost of Commuting: $ ' + total.toFixed(2) + '/month'
 
   document.getElementById('yearlyTotal').innerHTML = '($ ' + yearTotal.toFixed(2) + '/year)'
   
