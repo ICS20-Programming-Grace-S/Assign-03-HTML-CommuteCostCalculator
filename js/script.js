@@ -13,21 +13,21 @@ function calculate() {
   let workingDays = parseFloat(document.getElementById('workingDays').value)
   let kilometresGallon = parseFloat(document.getElementById('kilometresGallon').value)
   let fuel = parseFloat(document.getElementById('fuel').value)
-  let payement = parseFloat(document.getElementById('payement').value)
+  let payment = parseFloat(document.getElementById('payment').value)
   let parking = parseFloat(document.getElementById('parking').value)
   
   // calculate the user inputs into formulas
   let distanceKilometres = (workingDays * dailyCommute)
   let gallonsFuel = (distanceKilometres / kilometresGallon)
-  let moneyFuel = ((fuel * distanceKilometres) / kilometresGallon);
-  let total = (payement + moneyFuel + parking)
-  let yearTotal = (total * 12)
+  let moneyFuel = ((fuel * distanceKilometres) / kilometresGallon)
+  let total = (payment + moneyFuel + parking)
+  let yearTotal = 12*(payment + moneyFuel + parking)
   
   
-  // display the results
+  // display the after user input is entered into formulas
   document.getElementById('kilometreDistance').innerHTML = 'My Distance travelled per month is: ' + distanceKilometres.toFixed(2)  + ' km.'
 
-  document.getElementById('gallonsOfFuel').innerHTML = 'Gallons of Fuel: ' + gallonsFuel.toFixed(2)  + ' gallons.'
+  document.getElementById('gallonsOfFuel').innerHTML = 'Gallons of Fuel: ' + gallonsFuel.toFixed(2)  + ' gallons'
 
   document.getElementById('priceFuel').innerHTML = 'Spent on Fuel: $ ' + moneyFuel.toFixed(2)
 

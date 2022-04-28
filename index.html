@@ -15,6 +15,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png">
     <link rel="manifest" href="./fav_index/site.webmanifest">
 
+    <!-- MDL Stylesheet -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-purple.min.css" />
+
     <!-- CSS File -->
     <link rel="stylesheet" href="./css/style.css">
 
@@ -31,7 +35,7 @@
 
     <!-- Image -->
     <center>
-      <img src="./images/Commute.jpg" alt="commute" width="50%" height="auto"/>
+      <img src="./images/commute.jpg" alt="commute" width="50%" height="auto"/>
     </center>
     
     <!-- Numeric Textfield For Daily Roundtrip Commute -->
@@ -39,30 +43,30 @@
       <table>
         <tr>
           <td>
-            <h3>Daily Roundtrip Commute (in kilometres)</h3>
+            <h5>Daily Roundtrip Commute (in kilometres)</h5>
             <label for="distance">Distance:</label>
-            <input type="number" step="0.001" min="0" id="dailyCommute" placeholder="Enter Commute (km)...">
+            <input type="number" step="any" min="0" id="dailyCommute" placeholder="Enter Commute (km)...">
             <br>
             <br>
               
             <!-- Numeric Textfield for Working Days (per month) -->
-            <h3>Working Days (per month)</h3>
+            <h5>Working Days (per month)</h5>
             <label for="days">Days:</label>
-            <input type="number" step="any" min="0" id="workingDays" placeholder="Enter Working Days...">
+            <input type="number" step="any" min="0" max="31" id="workingDays" placeholder="Enter Working Days...">
             <br>
             <br>
           </td>
           
           <!-- Numeric Textfield for Kilometres per Gallon (in kilometres) -->
           <td>
-            <h3>Kilometres per Gallon (in kilometres)</h3>
+            <h5>Kilometres per Gallon (in kilometres)</h5>
             <label for="gallon">Kilometres per Gallon:</label>
-    				<input type="number" step="any" min="0" id="kilometresGallon" placeholder="Enter km per Gallon (km)...">
+    				<input type="number" step="any" min="0" id="kilometresGallon" placeholder="Enter km per Gallon...">
             <br>
             <br>
               
             <!-- Numeric Textfield for Fuel Price per Gallon ($) -->
-            <h3>Fuel Price per gallon ($)</h3>
+            <h5>Fuel Price per gallon ($)</h5>
             <label for="FuelPrice">Fuel Price:</label>
             <input type="number" step="any" min="0" id="fuel" placeholder="Enter Fuel Price ($)...">
             <br>
@@ -82,26 +86,28 @@
               <!-- Create a space where the user information will be displayed -->
               <br>
               <br>
-              <h3><div id="kilometreDistance"></div>
-              <div id="gallonsOfFuel"></div>
-              <div id="priceFuel"></div>
-              <div id="total"></div>
-              <div id="yearlyTotal"></div></h3>
+              <h5>
+                <div id="kilometreDistance"></div>
+                <div id="gallonsOfFuel"></div>
+                <div id="priceFuel"></div>
+                <div id="total"></div>
+                <div id="yearlyTotal"></div>
+              </h5>
             </center>
             <br>
             <br>
           </td>
           
-          <!-- Numeric Textfield for Car Payement per Month ($) -->
+          <!-- Numeric Textfield for Car Payment per Month ($) -->
           <td>
-            <h3>Car Payement per Month ($)</h3>
-            <label for="car">Car Payement:</label>
-            <input type="number" step="any" min="0" id="payement" placeholder="Enter Car Payment ($)...">
+            <h5>Car Payment per Month ($)</h5>
+            <label for="car">Car Payment:</label>
+            <input type="number" step="any" min="0" id="payment" placeholder="Enter Car Payment ($)...">
             <br>
             <br>
               
             <!-- Numeric Textfield for Parking Cost (per month) -->
-            <h3>Parking Cost (per month)</h3>
+            <h5>Parking Cost (per month)</h5>
             <label for="parking">Parking Cost ($):</label>
     		<input type="number" step="any" min="0" id="parking" placeholder="Enter Parking Cost ($)...">
             <br>
@@ -110,5 +116,11 @@
         </tr>
       </table>
     </center>
+    
+    <!-- Colored icon button -->
+    <center><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+      <i class="material-icons">mood</i>   
+    </button></center>   
+    
   </body>
 </html>
